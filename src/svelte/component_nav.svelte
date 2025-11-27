@@ -1,16 +1,7 @@
-<!-- script -->
-<script lang="ts">
-    // ROUTES
-    import { ROUTES } from "../ts/routes";
-
-    // ICONS
-    import { House, LayoutGrid, User, GlassWater } from "@lucide/svelte";
-</script>
-
 <!-- nav -->
 <nav>
     <a href={ROUTES.swap}><House /></a>
-    <a href={ROUTES.pools}><GlassWater /></a>
+    <a href={ROUTES.feed}><Newspaper /></a>
     <a href={ROUTES.profile}><User /></a>
     <a href={ROUTES.nav}><LayoutGrid /></a>
 </nav>
@@ -37,3 +28,12 @@
         color: var(--alt_color_two);
     }
 </style>
+
+<!-- script -->
+<script lang="ts">
+    // ROUTES
+    import { ROUTES } from "../ts/routes";
+
+    // ICONS
+    import { House, LayoutGrid, User, Newspaper } from "@lucide/svelte";
+</script>

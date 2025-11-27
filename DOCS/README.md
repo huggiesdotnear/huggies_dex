@@ -12,6 +12,7 @@ some unique features
 - small fee on every trade
 - trade history saved to local stroage
 - pnl cards
+- trade feed
 
 
 ---
