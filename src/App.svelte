@@ -1,6 +1,6 @@
 <main>
     <Router />
-    <NAV_PAGE/>
+    <NAV_COMPONENT/>
 </main>
 
 
@@ -9,6 +9,6 @@
 	import { Router } from 'sv-router';
 	import './ts/routes';
 	
-	import NAV_PAGE from './svelte/component_nav.svelte';
+	import NAV_COMPONENT from './svelte/component_nav.svelte';
 </script>
 
