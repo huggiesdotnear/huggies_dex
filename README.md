@@ -11,6 +11,7 @@ bun i
 bun run dev
 bun run build
 bun run typecheck
+bun run svelte-check
 bun run preview
 bun run clean
 ```
