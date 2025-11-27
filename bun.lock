@@ -4,6 +4,7 @@
     "": {
       "name": "huggies_dex_sv",
       "dependencies": {
+        "@lucide/svelte": "^0.555.0",
         "sv-router": "^0.11.0",
         "svelte": "^5.43.14",
       },
@@ -31,6 +32,8 @@
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.5", "", {}, "sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og=="],
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
+
+    "@lucide/svelte": ["@lucide/svelte@0.555.0", "", { "peerDependencies": { "svelte": "^5" } }, "sha512-aqTOMjBjf/HNwrhggRdb83T0QslZdpJTyTwr/chtXTGw7u4Hcu4zQb/5uA+csF0KKawKWVnsNI1MdHEHeEXTcQ=="],
 
     "@module-federation/error-codes": ["@module-federation/error-codes@0.21.4", "", {}, "sha512-ClpL5MereWNXh+EgDjz7w4RrC1JlisQTvXDa1gLxpviHafzNDfdViVmuhi9xXVuj+EYo8KU70Y999KHhk9424Q=="],
 
