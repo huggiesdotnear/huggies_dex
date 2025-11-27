@@ -10,8 +10,8 @@
 <!-- nav -->
 <nav>
     <a href={ROUTES.swap}><House /></a>
-    <a href={ROUTES.profile}><User /></a>
     <a href={ROUTES.pools}><GlassWater /></a>
+    <a href={ROUTES.profile}><User /></a>
     <a href={ROUTES.nav}><LayoutGrid /></a>
 </nav>
 
