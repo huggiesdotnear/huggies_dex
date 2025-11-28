@@ -3,7 +3,7 @@
 <nav>
     <a href={ROUTES.swap}><House /></a>
     <a href={ROUTES.feed}><Newspaper /></a>
-    <a href={ROUTES.user}><User /></a>
+    <a href={ROUTES.user_route}><User /></a>
     <a href={ROUTES.nav}><LayoutGrid /></a>
 </nav>
 <!--  -->
