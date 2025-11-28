@@ -13,6 +13,7 @@ some unique features
 - trade history saved to local stroage
 - pnl cards
 - trade feed
+- token holder page for top 100 holders
 
 
 ---
