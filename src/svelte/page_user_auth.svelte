@@ -1,16 +1,13 @@
-<!-- NAV PAGE -->
+<!-- USER AUTH PAGE -->
 <section>
-    <!-- <h1>NAV</h1> -->
+    <!-- <h1>USER AUTH</h1> -->
     <!--  -->
     <AUTH_BUTTON/>
     <NETWORK_BUTTON/>
-    <!--  -->
-    <a href={ROUTES.swap}><button>SWAP</button></a>
 </section>
 <!--  -->
 <!-- =========================================== -->
 <script lang="ts">
-  import { ROUTES } from "../ts/routes";
   import NETWORK_BUTTON from './components/button_network_toggle.svelte'
   import AUTH_BUTTON from './components/button_auth.svelte'
 </script>
