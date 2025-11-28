@@ -5,6 +5,8 @@
     <!--  -->
     <AUTH_BUTTON/>
     <NETWORK_BUTTON/>
+    (IF NOT AUTO REDIRECTED AFTER LOGIN)
+    <a href={ROUTES.user_route}><button>GO TO PROFILE</button></a>
 </section>
 <!--  -->
 <!-- =========================================== -->

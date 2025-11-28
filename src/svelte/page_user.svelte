@@ -11,5 +11,7 @@
     // Get the account ID from route parameters
     let accountId = $state<string>('');
 
-    $: accountId = route.params['account_id'] || '';
+    $effect(() => {
+        accountId = (route.params as Record<string, string>)['account_id'] || '';
+    });
 </script>
