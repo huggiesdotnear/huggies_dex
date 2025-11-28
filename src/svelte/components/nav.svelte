@@ -5,7 +5,8 @@
     <a href={ROUTES.profile}><User /></a>
     <a href={ROUTES.nav}><LayoutGrid /></a>
 </nav>
-
+<!--  -->
+<!-- =========================================== -->
 <!-- style -->
 <style>
     nav {
@@ -32,7 +33,7 @@
 <!-- script -->
 <script lang="ts">
     // ROUTES
-    import { ROUTES } from "../ts/routes";
+    import { ROUTES } from "../../ts/routes";
 
     // ICONS
     import { House, LayoutGrid, User, Newspaper } from "@lucide/svelte";

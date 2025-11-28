@@ -9,6 +9,6 @@
 	import { Router } from 'sv-router';
 	import './ts/routes';
 	
-	import NAV_COMPONENT from './svelte/component_nav.svelte';
+	import NAV_COMPONENT from './svelte/components/nav.svelte';
 </script>
 
