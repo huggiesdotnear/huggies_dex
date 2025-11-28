@@ -8,7 +8,7 @@
 - [x] set up network toggle
 - [ ] set up ref conts
 - [ ] set up whitlist, and blacklist
-- [ ] set up pwa
+- [x] set up pwa
 
 
 
