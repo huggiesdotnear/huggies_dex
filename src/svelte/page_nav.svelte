@@ -5,7 +5,12 @@
     <AUTH_BUTTON/>
     <NETWORK_BUTTON/>
     <!--  -->
+    <h6>PAGES</h6>
     <a href={ROUTES.swap}><button>SWAP</button></a>
+    <a href={ROUTES.profile}><button>PROFILE</button></a>
+    <a href={ROUTES.feed}><button>FEED</button></a>
+    <a href={ROUTES.burn}><button>BURN</button></a>
+    <a href={ROUTES.about}><button>ABOUT</button></a>
 </section>
 <!--  -->
 <!-- =========================================== -->

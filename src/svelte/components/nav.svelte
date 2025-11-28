@@ -1,3 +1,4 @@
+<!-- NAV_COMPONENT -->
 <!-- nav -->
 <nav>
     <a href={ROUTES.swap}><House /></a>

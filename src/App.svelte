@@ -1,5 +1,6 @@
 <main>
     <Router />
+    <FOOTER_COMPONENT/>
     <NAV_COMPONENT/>
 </main>
 
@@ -10,5 +11,6 @@
 	import './ts/routes';
 	
 	import NAV_COMPONENT from './svelte/components/nav.svelte';
+	import FOOTER_COMPONENT from './svelte/components/footer.svelte';
 </script>
 
