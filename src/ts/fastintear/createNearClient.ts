@@ -14,9 +14,9 @@ export const NETWORK_STORAGE_KEY = "network_id"; // used for network toggle
 function getStoredNetworkId(): "mainnet" | "testnet" {
   const raw = localStorage.getItem(NETWORK_STORAGE_KEY);
   const value = (raw || "mainnet").trim().toLowerCase();
-  return value === "testnet" ? "testnet" : "mainnet";
   // also global near needs to be configured. easiest to make sure right everytime we need
   near.config({ networkId: value})
+  return value === "testnet" ? "testnet" : "mainnet";
 }
 
 export function nearClient() {
