@@ -7,7 +7,7 @@
 <!-- =========================================== -->
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { setNetwork } from "../../ts/fastintear/createNearClient";
+  import { NETWORK_STORAGE_KEY } from "../../ts/fastintear/createNearClient";
 
   let NETWORK_ID: string = "mainnet";
 
@@ -20,6 +20,7 @@
   function toggleNetwork() {
     const newNetwork = NETWORK_ID === "mainnet" ? "testnet" : "mainnet";
     NETWORK_ID = newNetwork;
-    setNetwork(newNetwork);
+    localStorage.setItem(NETWORK_STORAGE_KEY, newNetwork);
+    console.info(newNetwork)
   }
 </script>

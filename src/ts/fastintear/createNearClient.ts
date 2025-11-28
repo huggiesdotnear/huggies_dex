@@ -7,15 +7,9 @@ import { createNearClient } from "fastintear";
 const near_mainnetClient = createNearClient({ networkId: "mainnet" });
 const near_testnetClient = createNearClient({ networkId: "testnet" });
 
-const STORAGE_KEY = "network_id";
-
+export const NETWORK_STORAGE_KEY = "network_id"; // used for network toggle
 // Function to get the current client based on localStorage
 export function nearClient() {
-  const networkId = localStorage.getItem(STORAGE_KEY) || "mainnet";
+  const networkId = localStorage.getItem(NETWORK_STORAGE_KEY) || "mainnet";
   return networkId === "testnet" ? near_testnetClient : near_mainnetClient;
-}
-
-// Function to set the network in localStorage
-export function setNetwork(networkId: string) {
-  localStorage.setItem(STORAGE_KEY, networkId);
 }
