@@ -1,4 +1,5 @@
 <!-- NAV PAGE -->
+<!-- NAV_PAGE -->
 <section>
     <!-- <h1>NAV</h1> -->
     <!--  -->
@@ -7,7 +8,7 @@
     <!--  -->
     <h6>PAGES</h6>
     <a href={ROUTES.swap}><button>SWAP</button></a>
-    <a href={ROUTES.profile}><button>PROFILE</button></a>
+    <a href={ROUTES.user}><button>PROFILE</button></a>
     <a href={ROUTES.feed}><button>FEED</button></a>
     <a href={ROUTES.burn}><button>BURN</button></a>
     <a href={ROUTES.about}><button>ABOUT</button></a>
