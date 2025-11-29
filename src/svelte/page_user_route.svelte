@@ -2,7 +2,7 @@
 <!-- USER_ROUTE_PAGE -->
 <section>
     <!-- <h1>USER</h1> -->
-    <p>Redirecting...</p>
+    <!-- <p>Redirecting...</p> -->
 </section>
 <!--  -->
 <!-- =========================================== -->
@@ -18,7 +18,7 @@
         if (isSignedIn) {
             const accountId = nearClient().accountId();
             if (accountId) {
-                navigate(ROUTES.user.replace(':account_id', accountId));
+                navigate(ROUTES.trader.replace(':account_id', accountId));
             } else {
                 navigate(ROUTES.user_auth);
             }

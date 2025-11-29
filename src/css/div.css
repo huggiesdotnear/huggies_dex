@@ -1,0 +1,13 @@
+/*div*/
+
+.about_card {
+    width: 500px;
+    max-width: 90%;
+    padding: 1px;
+    margin: 5px;
+}
+.white_card {
+    background-color: var(--lit_color_one);
+    color: var(--drk_color_one)
+    
+}

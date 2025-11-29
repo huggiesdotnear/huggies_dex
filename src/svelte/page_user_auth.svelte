@@ -27,7 +27,7 @@
       if (accountId) {
         // Add a small delay to ensure the UI updates before redirecting
         setTimeout(() => {
-          navigate(ROUTES.user.replace(':account_id', accountId));
+          navigate(ROUTES.trader.replace(':account_id', accountId));
         }, 500);
       }
     }

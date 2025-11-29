@@ -1,7 +1,7 @@
 <!-- USER PAGE -->
 <!-- USER_PAGE -->
 <section>
-    <h1>User: {accountId}</h1>
+    <h1>TRADER: {accountId}</h1>
 </section>
 <!--  -->
 <!-- =========================================== -->
