@@ -1,7 +1,7 @@
 import { createRouter } from 'sv-router';
-
+//
 // PAGES
-// import HOME_PAGE from '../svelte/page_home.svelte';
+import HOME_PAGE from '../svelte/page_home.svelte';
 import SWAP_PAGE from '../svelte/page_swap.svelte';
 import POOLS_PAGE from '../svelte/page_pools.svelte';
 import POOL_PAGE from '../svelte/page_pool.svelte';
@@ -29,10 +29,10 @@ export const ROUTES = {
   burn: "/burn",
   feed: "/feed",
 }
-
+//
 export const { p, navigate, isActive, route } = createRouter({
-  [ROUTES.home]: SWAP_PAGE,
-  [ROUTES.all]: SWAP_PAGE,
+  [ROUTES.home]: HOME_PAGE,
+  [ROUTES.all]: HOME_PAGE,
   [ROUTES.swap]: SWAP_PAGE,
   [ROUTES.pools]: POOLS_PAGE,
   [ROUTES.pool]: POOL_PAGE,

@@ -1,7 +1,7 @@
 <main>
+    <NAV_TAB_COMPONENT/>
     <Router />
     <FOOTER_COMPONENT/>
-    <NAV_COMPONENT/>
 </main>
 
 
@@ -10,7 +10,7 @@
 	import { Router } from 'sv-router';
 	import './ts/routes';
 	
-	import NAV_COMPONENT from './svelte/components/nav.svelte';
+	import NAV_TAB_COMPONENT from './svelte/components/nav_tab.svelte';
 	import FOOTER_COMPONENT from './svelte/components/footer.svelte';
 </script>
 
