@@ -5,10 +5,15 @@ const huggies_indb_const = new InDB({
   version: 1,
   stores: [
     {
-      name: 'pools',
+      name: 'mainnet_pools',
+      primaryKeyPath: 'id',
+    },
+    {
+      name: 'testnet_pools',
       primaryKeyPath: 'id',
     }
   ],
-})
+});
 //
-export const huggies_pools_indb_const = huggies_indb_const.use('pools')
+export const huggies_mainnet_pools_indb_const = huggies_indb_const.use('mainnet_pools');
+export const huggies_testnet_pools_indb_const = huggies_indb_const.use('testnet_pools');

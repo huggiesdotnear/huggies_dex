@@ -1,7 +1,7 @@
 <!-- NAV_TAB_COMPONENT -->
 <!-- nav -->
 <nav>
-    <a href={ROUTES.swap}>SWAP</a>
+    <a href={ROUTES.home}>SWAP</a>
     <a href={ROUTES.pools}>POOLS</a>
     <a href={ROUTES.about}>ABOUT</a>
 </nav>

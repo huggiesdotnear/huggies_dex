@@ -7,7 +7,7 @@
 <!-- =========================================== -->
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { NETWORK_STORAGE_KEY } from "../../ts/fastintear/createNearClient";
+  import { NETWORK_STORAGE_KEY } from "../../ts/network";
 
   let NETWORK_ID: string = "mainnet";
 
