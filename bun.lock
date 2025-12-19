@@ -5,6 +5,7 @@
       "name": "huggies_dex_sv",
       "dependencies": {
         "@lucide/svelte": "^0.555.0",
+        "@sleet-js/ref-exchange-methods-const": "^0.0.1",
         "fastintear": "^0.3.8",
         "sv-router": "^0.11.0",
         "svelte": "^5.43.14",
@@ -86,6 +87,8 @@
     "@rspack/core": ["@rspack/core@1.6.5", "", { "dependencies": { "@module-federation/runtime-tools": "0.21.4", "@rspack/binding": "1.6.5", "@rspack/lite-tapable": "1.1.0" }, "peerDependencies": { "@swc/helpers": ">=0.5.1" }, "optionalPeers": ["@swc/helpers"] }, "sha512-AqaOMA6MTNhqMYYwrhvPA+2uS662SkAi8Rb7B/IFOzh/Z5ooyczL4lUX+qyhAO3ymn50iwM4jikQCf9XfBiaQA=="],
 
     "@rspack/lite-tapable": ["@rspack/lite-tapable@1.1.0", "", {}, "sha512-E2B0JhYFmVAwdDiG14+DW0Di4Ze4Jg10Pc4/lILUrd5DRCaklduz2OvJ5HYQ6G+hd+WTzqQb3QnDNfK4yvAFYw=="],
+
+    "@sleet-js/ref-exchange-methods-const": ["@sleet-js/ref-exchange-methods-const@0.0.1", "", { "peerDependencies": { "typescript": "^5" } }, "sha512-FKYjpoKGgxC8kKCdiKajISQG7EaULhGs5vBP5oDHS6RRdV/apZR5clSf6YuP5Nbw9teVG/5iEUeYqgW1s2ScaA=="],
 
     "@sveltejs/acorn-typescript": ["@sveltejs/acorn-typescript@1.0.7", "", { "peerDependencies": { "acorn": "^8.9.0" } }, "sha512-znp1A/Y1Jj4l/Zy7PX5DZKBE0ZNY+5QBngiE21NJkfSTyzzC5iKNWOtwFXKtIrn7MXEFBck4jD95iBNkGjK92Q=="],
 
