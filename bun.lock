@@ -7,6 +7,7 @@
         "@lucide/svelte": "^0.555.0",
         "@sleet-js/ref-exchange-methods-const": "^0.0.1",
         "fastintear": "^0.3.8",
+        "indb": "^4.0.1",
         "sv-router": "^0.11.0",
         "svelte": "^5.43.14",
       },
@@ -133,6 +134,8 @@
     "fastintear": ["fastintear@0.3.8", "", { "dependencies": { "@fastnear/borsh-schema": "^0.9.7", "@noble/curves": "^2.0.1", "@noble/hashes": "^2.0.1", "base58-js": "^3.0.3", "big.js": "^7.0.1", "borsh": "^2.0.0", "js-base64": "^3.7.8" } }, "sha512-/YfmlDD3RQT64vqcpKEwPS0faedOniJwnop+AcgWAoz6OkSeHqqQZ9rzXecvNeKKQSecpnnPv6xx9WbuGdzzPQ=="],
 
     "fdir": ["fdir@6.5.0", "", { "peerDependencies": { "picomatch": "^3 || ^4" }, "optionalPeers": ["picomatch"] }, "sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg=="],
+
+    "indb": ["indb@4.0.1", "", {}, "sha512-5RTPDoizRLC3pMHqG7Wx1sTwj3+mdVqMcoVFydk/SVJVdNmdbErXJCW3Gf+My0IL2h1IB5eqm9ktaqoQweuF/g=="],
 
     "is-reference": ["is-reference@3.0.3", "", { "dependencies": { "@types/estree": "^1.0.6" } }, "sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw=="],
 
