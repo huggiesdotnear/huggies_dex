@@ -29,6 +29,6 @@ export function dexie_db_for_network() {
   const networkId = getStoredNetworkId();
   const huggies_mainnet_pools_dexie_const = huggiesDB.mainnet_pools;
   const huggies_testnet_pools_dexie_const = huggiesDB.testnet_pools;
-  const dexie_db = networkId === "testnet" ? huggies_mainnet_pools_dexie_const : huggies_testnet_pools_dexie_const;
+  const dexie_db = networkId === "testnet" ? huggies_testnet_pools_dexie_const : huggies_mainnet_pools_dexie_const;
   return dexie_db;
 }
