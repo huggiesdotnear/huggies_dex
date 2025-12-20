@@ -1,6 +1,7 @@
 import Dexie from 'dexie';
 import type { Table } from 'dexie';
 import type { REF_POOL_INFO_TYPE } from '../ref/pool_type';
+import { getStoredNetworkId } from '../network';
 //
 // We store REF_POOL_INFO_TYPE together with an explicit string id you supply externally.
 export type POOL_RECORD_TYPE = REF_POOL_INFO_TYPE & { id: string };
@@ -21,8 +22,13 @@ class HuggiesDB extends Dexie {
   }
 }
 //
-export const huggiesDB = new HuggiesDB();
-
-// Exported handles similar to your previous "use" API
-export const huggies_mainnet_pools_indb_const = huggiesDB.mainnet_pools;
-export const huggies_testnet_pools_indb_const = huggiesDB.testnet_pools;
+const huggiesDB = new HuggiesDB();
+//
+//
+export function dexie_db_for_network() {
+  const networkId = getStoredNetworkId();
+  const huggies_mainnet_pools_dexie_const = huggiesDB.mainnet_pools;
+  const huggies_testnet_pools_dexie_const = huggiesDB.testnet_pools;
+  const dexie_db = networkId === "testnet" ? huggies_mainnet_pools_dexie_const : huggies_testnet_pools_dexie_const;
+  return dexie_db;
+}
