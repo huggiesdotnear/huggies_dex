@@ -1,7 +1,6 @@
 // this file exports the local storage key and get network function
 import * as near from "fastintear";
-//
-export const NETWORK_STORAGE_KEY = "network_id"; // used for network toggle
+import { NETWORK_STORAGE_KEY } from "./localStorage";
 //
 //
 export function getStoredNetworkId(): "mainnet" | "testnet" {
