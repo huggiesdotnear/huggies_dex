@@ -1,6 +1,6 @@
 import Dexie from 'dexie';
 import type { Table } from 'dexie';
-import type { REF_POOL_INFO_TYPE } from '../ref/pool_type';
+import type { REF_POOL_INFO_TYPE } from '../ref/ref_types';
 import { getStoredNetworkId } from '../network';
 //
 // We store REF_POOL_INFO_TYPE together with an explicit string id you supply externally.
