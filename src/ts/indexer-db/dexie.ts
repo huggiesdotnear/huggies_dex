@@ -16,8 +16,8 @@ class HuggiesDB extends Dexie {
     // Primary key is the explicit string "id" you provide. No auto-increment.
     this.version(1).stores({
       // Add indexes for fields you commonly query (optional but recommended)
-      mainnet_pools: 'id,pool_kind',
-      testnet_pools: 'id,pool_kind',
+      mainnet_pools: 'id, pool_kind, *token_account_ids, *amounts, total_fee, shares_total_supply, amp',
+      testnet_pools: 'id, pool_kind, *token_account_ids, *amounts, total_fee, shares_total_supply, amp',
     });
   }
 }
