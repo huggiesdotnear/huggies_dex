@@ -1,10 +1,10 @@
 import Dexie from 'dexie';
 import type { Table } from 'dexie';
-import type { REF_POOL_INFO_TYPE } from '../ref/ref_types';
+import type { REF_GET_POOL_TYPE } from '../ref/ref_types';
 import { getStoredNetworkId } from '../network';
 //
 // We store REF_POOL_INFO_TYPE together with an explicit string id you supply externally.
-export type POOL_RECORD_TYPE = REF_POOL_INFO_TYPE & { id: string };
+export type POOL_RECORD_TYPE = REF_GET_POOL_TYPE & { id: string };
 //
 class HuggiesDB extends Dexie {
   mainnet_pools!: Table<POOL_RECORD_TYPE, string>;
