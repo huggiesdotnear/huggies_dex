@@ -65,3 +65,6 @@ export const get_pools_function_const = async (
     throw error;
   }
 };
+// ================================================
+// ================================================
+// copyright 2025 by sleet.near
