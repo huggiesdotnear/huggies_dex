@@ -17,7 +17,7 @@ interface ref_args_params_interface {
 // ================================================
 // get_number_of_pools_function
 // Fetch the total number of pools
-export async function get_number_of_pools_function(): Promise<number> {
+export async function ref_get_number_of_pools_function(): Promise<number> {
   const result = await nearClient().view({
     contractId: ref_contractId_for_network(),
     methodName: ref_exchange_methods_const.get_number_of_pools,
@@ -27,7 +27,7 @@ export async function get_number_of_pools_function(): Promise<number> {
 }
 // ================================================
 // get_pool_function
-export async function get_pool_function(
+export async function ref_get_pool_function(
   pool_id: ref_args_params_interface["pool_id"],
 ): Promise<REF_GET_POOL_TYPE> {
   const result = await nearClient().view({
@@ -40,7 +40,7 @@ export async function get_pool_function(
 }
 // ================================================
 // get_pools_function
-export async function get_pools_function(
+export async function ref_get_pools_function(
   from_index: ref_args_params_interface["from_index"],
   limit: ref_args_params_interface["limit"],
 ): Promise<REF_GET_POOL_TYPE[]> {
