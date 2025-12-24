@@ -1,5 +1,5 @@
 import { ref_mainnet_contractId_const, ref_testnet_contractId_const } from "@sleet-js/ref-exchange-methods-const";
-import { getStoredNetworkId } from "../network";
+import { getStoredNetworkId } from "../fastintear/createNearClient";
 //
 export function ref_contractId_for_network() {
   const networkId = getStoredNetworkId();

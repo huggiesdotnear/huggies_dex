@@ -7,13 +7,13 @@
 <!-- =========================================== -->
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { NETWORK_STORAGE_KEY } from "../../ts/localStorage";
+  import { NETWORK_STORAGE_KEY } from '../../ts/fastintear/createNearClient';
 
   let NETWORK_ID: string = "mainnet";
 
   onMount(() => {
     // Initialize network ID from localStorage
-    const savedNetwork = localStorage.getItem("network_id") || "mainnet";
+    const savedNetwork = localStorage.getItem(NETWORK_STORAGE_KEY) || "mainnet";
     NETWORK_ID = savedNetwork;
   });
 
