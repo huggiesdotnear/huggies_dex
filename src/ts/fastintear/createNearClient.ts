@@ -12,7 +12,7 @@ export function getStoredNetworkId(): "mainnet" | "testnet" {
   const raw = localStorage.getItem(NETWORK_STORAGE_KEY);
   const value = (raw || "mainnet").trim().toLowerCase();
   // also global near needs to be configured. easiest to make sure right everytime we need
-  near.config({ networkId: value})
+  near.config({ networkId: value });
   return value === "testnet" ? "testnet" : "mainnet";
 }
 // ===========================================
@@ -33,3 +33,6 @@ export function nearClient() {
 
   return client;
 }
+// ================================================
+// ================================================
+// copyright 2025 by sleet.near
