@@ -15,21 +15,21 @@ interface ref_args_params_interface {
   limit: number;
 }
 // ================================================
-// get_number_of_pools_function_const
+// get_number_of_pools_function
 // Fetch the total number of pools
-export const get_number_of_pools_function_const = async (): Promise<number> => {
+export async function get_number_of_pools_function(): Promise<number> {
   const result = await nearClient().view({
     contractId: ref_contractId_for_network(),
     methodName: ref_exchange_methods_const.get_number_of_pools,
     args: {},
   });
   return result as number;
-};
+}
 // ================================================
-// get_pool_function_const
-export const get_pool_function_const = async (
+// get_pool_function
+export async function get_pool_function(
   pool_id: ref_args_params_interface["pool_id"],
-): Promise<REF_GET_POOL_TYPE> => {
+): Promise<REF_GET_POOL_TYPE> {
   const result = await nearClient().view({
     contractId: ref_contractId_for_network(),
     methodName: ref_exchange_methods_const.get_pool,
@@ -37,13 +37,13 @@ export const get_pool_function_const = async (
   });
 
   return REF_GET_POOL_TYPE_Z_CONST.parse(result);
-};
+}
 // ================================================
-// get_pools_function_const
-export const get_pools_function_const = async (
+// get_pools_function
+export async function get_pools_function(
   from_index: ref_args_params_interface["from_index"],
   limit: ref_args_params_interface["limit"],
-): Promise<REF_GET_POOL_TYPE[]> => {
+): Promise<REF_GET_POOL_TYPE[]> {
   const result = await nearClient().view({
     contractId: ref_contractId_for_network(),
     methodName: ref_exchange_methods_const.get_pools,
@@ -51,7 +51,7 @@ export const get_pools_function_const = async (
   });
 
   return REF_GET_POOLS_TYPE_Z_CONST.parse(result);
-};
+}
 // ================================================
 // ================================================
 // copyright 2025 by sleet.near

@@ -1,7 +1,7 @@
 import Dexie from 'dexie';
 import type { Table } from 'dexie';
 import type { REF_GET_POOL_TYPE } from '../ref/ref_types';
-import { getStoredNetworkId } from '../network';
+import { getStoredNetworkId } from '../fastintear/createNearClient';
 //
 // We store REF_POOL_INFO_TYPE together with an explicit string id you supply externally.
 export type POOL_RECORD_TYPE = REF_GET_POOL_TYPE & { id: string };
