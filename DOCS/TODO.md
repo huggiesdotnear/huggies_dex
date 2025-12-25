@@ -1,7 +1,5 @@
 # TODO
 
-
-
 - [x] set up fastintear and login
 - [x] set up network toggle
 - [x] set up pwa
@@ -14,14 +12,6 @@
 - [ ] work on swap papge
 - [ ] work on burn page
 - [ ] work on pool page
-
-
-
-
-
-
-
-
 
 ---
 

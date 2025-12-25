@@ -25,8 +25,9 @@
   "devDependencies": {
     "@rsbuild/core": "^1.6.7",
     "@rsbuild/plugin-svelte": "^1.0.11",
+    "@types/bun": "latest",
+    "prettier": "3.7.4",
     "svelte-check": "^4.3.4",
-    "typescript": "^5.9.3",
-    "@types/bun": "latest"
+    "typescript": "^5.9.3"
   }
 }

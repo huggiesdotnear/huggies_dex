@@ -1,14 +1,11 @@
 # DESIGN
 
-
-
 pages
+
 - home swap
 - nav
 - pool pages
 - about page
-
-
 
 ---
 

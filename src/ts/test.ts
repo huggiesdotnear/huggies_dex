@@ -25,7 +25,9 @@ async function exampleUsage_of_get_pool() {
 
     console.log("Pool data:", pool);
   } catch (error) {
-    console.error("Expected or Unexpected error in exampleUsage_of_get_pool!!!");
+    console.error(
+      "Expected or Unexpected error in exampleUsage_of_get_pool!!!",
+    );
   }
 }
 console.log(exampleUsage_of_get_pool());
@@ -35,4 +37,3 @@ console.log("==========================================================");
 // const txHistory = nearClient().localTxHistory();
 // console.log(txHistory);
 console.log("==========================================================");
-
