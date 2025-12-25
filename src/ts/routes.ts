@@ -10,6 +10,7 @@ import USER_ROUTE_PAGE from '../svelte/page_user_route.svelte';
 import USER_AUTH_PAGE from '../svelte/page_user_auth.svelte';
 import NAV_PAGE from '../svelte/page_nav.svelte';
 import ABOUT_PAGE from '../svelte/page_about.svelte';
+import ADD_POOL_PAGE from '../svelte/page_add_pool.svelte';
 import SETTINGS_PAGE from '../svelte/page_settings.svelte';
 import BURN_PAGE from '../svelte/page_burn.svelte';
 import FEED_PAGE from '../svelte/page_feed.svelte';
@@ -44,6 +45,7 @@ export const { p, navigate, isActive, route } = createRouter({
 	[ROUTES.user_auth]: USER_AUTH_PAGE,
 	[ROUTES.nav]: NAV_PAGE,
 	[ROUTES.about]: ABOUT_PAGE,
+	[ROUTES.add_pool]: ADD_POOL_PAGE,
 	[ROUTES.settings]: SETTINGS_PAGE,
 	[ROUTES.burn]: BURN_PAGE,
   [ROUTES.feed]: FEED_PAGE,
