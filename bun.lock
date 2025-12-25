@@ -5,6 +5,7 @@
       "name": "huggies_dex_sv",
       "dependencies": {
         "@lucide/svelte": "^0.555.0",
+        "@near-js/jsonrpc-types": "^1.5.0",
         "@sleet-js/ref-exchange-methods-const": "^0.0.1",
         "dexie": "^4.2.1",
         "fastintear": "^0.3.8",
@@ -55,6 +56,8 @@
     "@module-federation/webpack-bundler-runtime": ["@module-federation/webpack-bundler-runtime@0.21.4", "", { "dependencies": { "@module-federation/runtime": "0.21.4", "@module-federation/sdk": "0.21.4" } }, "sha512-dusmR3uPnQh9u9ChQo3M+GLOuGFthfvnh7WitF/a1eoeTfRmXqnMFsXtZCUK+f/uXf+64874Zj/bhAgbBcVHZA=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.0.7", "", { "dependencies": { "@emnapi/core": "^1.5.0", "@emnapi/runtime": "^1.5.0", "@tybys/wasm-util": "^0.10.1" } }, "sha512-SeDnOO0Tk7Okiq6DbXmmBODgOAb9dp9gjlphokTUxmt8U3liIP1ZsozBahH69j/RJv+Rfs6IwUKHTgQYJ/HBAw=="],
+
+    "@near-js/jsonrpc-types": ["@near-js/jsonrpc-types@1.5.0", "", { "dependencies": { "zod": "^4.0.5" } }, "sha512-pgidkMApxPWp/tSgHUpVsn9n9fF1RZmk/A/yM/TEuzuczqMhnnT9I5ow4qmYPQyVMMWFialELT2SGm/LKym8bA=="],
 
     "@noble/curves": ["@noble/curves@2.0.1", "", { "dependencies": { "@noble/hashes": "2.0.1" } }, "sha512-vs1Az2OOTBiP4q0pwjW5aF0xp9n4MxVrmkFBxc6EKZc6ddYx5gaZiAsZoq0uRRXWbi3AT/sBqn05eRPtn1JCPw=="],
 

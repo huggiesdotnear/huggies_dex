@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@lucide/svelte": "^0.555.0",
+    "@near-js/jsonrpc-types": "^1.5.0",
     "@sleet-js/ref-exchange-methods-const": "^0.0.1",
     "dexie": "^4.2.1",
     "fastintear": "^0.3.8",
