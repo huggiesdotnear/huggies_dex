@@ -14,8 +14,10 @@
   "dependencies": {
     "@lucide/svelte": "^0.555.0",
     "@sleet-js/ref-exchange-methods-const": "^0.0.1",
+    "@types/js-cookie": "^3.0.6",
     "dexie": "^4.2.1",
     "fastintear": "^0.3.8",
+    "js-cookie": "3.0.4",
     "sv-router": "^0.11.0",
     "svelte": "^5.43.14",
     "zod": "^4.2.1"
