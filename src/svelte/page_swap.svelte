@@ -29,6 +29,7 @@
     // ===========================================
     import COMPONENT_SWAP_POOL_INFO_CARD from "./components/swap_pool_info_card.svelte";
     import { ref_get_pool_function } from "../ts/ref/ref_functions";
+    import { put_pool_function } from "../ts/indexer-db/put-pools";
     //
     let pool_kind: string;
     let token_account_ids: string[];
@@ -45,6 +46,16 @@
         total_fee = pool_info.total_fee;
         shares_total_supply = pool_info.shares_total_supply;
         amp = pool_info.amp;
+
+        put_pool_function(
+            raw_route_pool_id,
+            pool_kind,
+            token_account_ids,
+            amounts,
+            total_fee,
+            shares_total_supply,
+            amp
+        );
     }
     update_pool_info();
 </script>
