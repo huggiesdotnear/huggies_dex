@@ -13,6 +13,8 @@ interface ref_args_params_interface {
   pool_id: number;
   from_index: number;
   limit: number;
+  fee: number;
+  tokens: string[];
 }
 // ================================================
 // get_number_of_pools_function
@@ -51,6 +53,26 @@ export async function ref_get_pools_function(
   });
 
   return REF_GET_POOLS_TYPE_Z_CONST.parse(result);
+}
+// ================================================
+// add_simple_pool_function
+export async function ref_add_simple_pool_function(
+  fee: ref_args_params_interface["fee"],
+  tokens: ref_args_params_interface["tokens"],
+) {
+  const result = await nearClient().sendTx({
+    receiverId: ref_contractId_for_network(),
+    actions: [
+      nearClient().actions.functionCall({
+        methodName: ref_exchange_methods_const.add_simple_pool,
+        args: { fee: fee, tokens: tokens },
+        gas: "30000000000000", // 30 TGas
+        deposit: "1", // No deposit needed for this call
+      }),
+    ],
+  });
+  console.log(result);
+  return result;
 }
 // ================================================
 // ================================================
