@@ -10,7 +10,7 @@
             <button on:click={() => (fee = 0)}>0%</button>
             <button on:click={() => (fee = 25)}>0.25%</button>
             <button on:click={() => (fee = 50)}>0.50%</button>
-            <button on:click={() => (fee = 75)}>0.57%</button>
+            <button on:click={() => (fee = 75)}>0.75%</button>
             <button on:click={() => (fee = 100)}>1%</button>
         </div>
         <input type="number" bind:value={fee} required />
