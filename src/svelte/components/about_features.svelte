@@ -4,6 +4,7 @@
     <ul>
         <li>no auto routing</li>
         <li>no human readable unit format</li>
+        <li>no rules</li>
         <!-- <li>create custom trade routes</li> -->
         <!-- <li>small fee on every trade, that goes back to community or gets burned</li> -->
     </ul>
