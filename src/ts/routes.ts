@@ -27,6 +27,7 @@ export const ROUTES = {
   pools: "/pools",
   pool: "/pool/:pool_id",
   about: "/about",
+  add_pool: "/add-pool",
   settings: "/settings",
   burn: "/burn",
   feed: "/feed",
