@@ -8,5 +8,22 @@ console.log("THIS IS TO TEST THE RIGHT STUFF IS BEING USED FOR NETWORK")
 console.log(localStorage.getItem(NETWORK_STORAGE_KEY))
 ref_contractId_for_network()
 console.log(await ref_get_number_of_pools_function())
-console.log(await ref_get_pool_function(5767))
+// console.log(await ref_get_pool_function(5767))
+// ==============================
+async function exampleUsage_of_get_pool() {
+  try {
+    const pool = await ref_get_pool_function(5767);
+
+    if (!pool) {
+      console.log("Pool not found or error occurred.");
+      return;
+    }
+
+    console.log("Pool data:", pool);
+  } catch (error) {
+    console.error("Unexpected error in exampleUsage:", error);
+  }
+}
+console.log(exampleUsage_of_get_pool())
+// ==============================
 console.log("============================")
