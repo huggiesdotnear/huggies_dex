@@ -4,7 +4,7 @@
     <h1>ADD SIMPLE POOL</h1>
     <p>(create a new simple pool)</p>
     <!--  -->
-    <from on:submit={create}>
+    <from>
         <p>FEE</p>
         <div class="fee-buttons">
             <button on:click={() => (fee = 0)}>0%</button>
@@ -27,7 +27,7 @@
             placeholder="wrap.near"
             required
         />
-        <button type="submit">CREATE</button>
+        <button type="submit" on:click={create}>CREATE</button>
     </from>
     <!--  -->
     <p></p>
@@ -40,8 +40,8 @@
     let fee: number = 0;
     let tokens: string[] = ["", ""];
     
-    function create() {
-      ref_add_simple_pool_function(fee, tokens)
+    async function create() {
+      await ref_add_simple_pool_function(fee, tokens)
     }
 </script>
 <!--  -->

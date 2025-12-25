@@ -67,7 +67,7 @@ export async function ref_add_simple_pool_function(
         methodName: ref_exchange_methods_const.add_simple_pool,
         args: { fee: fee, tokens: tokens },
         gas: "30000000000000", // 30 TGas
-        deposit: "50000000000000000000000", // 0.05
+        deposit: "9000000000000000000000", // 0.009
       }),
     ],
   });
