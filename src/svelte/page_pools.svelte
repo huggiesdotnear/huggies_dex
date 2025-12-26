@@ -37,13 +37,9 @@
   </div>
   <!--  -->
   <!--  -->
+  <p></p>
   <a href={ROUTES.add_pool}><button>CREATE NEW POOL</button></a>
   <p></p>
   <!--  -->
 </section>
 
-<style>
-  .pools-container {
-    margin-top: 1rem;
-  }
-</style>

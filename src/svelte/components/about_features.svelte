@@ -7,6 +7,7 @@
     <li>no price fecthing, 1 NEAR = 1 NEAR</li>
     <li>no rules</li>
     <li>no error handinling, verify tx reults on near blocks</li>
+    <li>no whitelist, no blacklist</li>
     <!-- <li>create custom trade routes</li> -->
     <!-- <li>small fee on every trade, that goes back to community or gets burned</li> -->
   </ul>
