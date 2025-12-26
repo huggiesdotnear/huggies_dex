@@ -14,7 +14,7 @@
 <nav>
   <a href={ROUTES.home}>SWAP</a>
   <a href={ROUTES.pools}>POOLS</a>
-  <a href={ROUTES.about}>ABOUT</a>
+  <a href={ROUTES.nav}>MORE</a>
 </nav>
 
 <!--  -->
