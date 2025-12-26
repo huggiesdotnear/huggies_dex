@@ -1,12 +1,12 @@
 import { ref_get_pool_function } from "../../ts/ref/ref_functions";
 import { put_pool_function } from "../../ts/indexer-db/put-pools";
 // ===============================================================
-export let pool_kind: string;
-export let token_account_ids: string[];
-export let amounts: string[];
-export let total_fee: number;
-export let shares_total_supply: string;
-export let amp: number;
+let pool_kind: string;
+let token_account_ids: string[];
+let amounts: string[];
+let total_fee: number;
+let shares_total_supply: string;
+let amp: number;
 //
 export async function get_and_put_pool_info(pool_id: string) {
   const parsed_route_pool_id = Number(pool_id);
