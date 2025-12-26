@@ -32,7 +32,7 @@
   </div>
   <div class="pool-links">
       <a href={ROUTES.swap.replace(":pool_id", pool.id)}>TRADE</a>
-      <a href={ROUTES.pool.replace(":pool_id", pool.id)}>DETAILS</a>
+      <!-- <a href={ROUTES.pool.replace(":pool_id", pool.id)}>DETAILS</a> -->
       <a href={ROUTES.pools} on:click={handleRemove}>🗑️ RM</a>
   </div>
 </div>
