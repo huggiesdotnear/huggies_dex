@@ -2,7 +2,7 @@
 <!-- script -->
 <script lang="ts">
   import { get_and_put_pool_info } from "../ts/get_and_put_pool_info";
-  let pool_id: string;
+  let pool_id: string = "0";
 
   async function handleFetch() {
     await get_and_put_pool_info(pool_id);

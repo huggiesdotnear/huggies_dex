@@ -36,6 +36,7 @@
 <style>
   div {
     background-color: white;
+    border-radius: 8px;
     color: var(--drk_color_one);
     width: 500px;
     max-width: 90vw;

@@ -24,8 +24,10 @@
       </div>
     {/each}
   </div>
-  <a href={ROUTES.swap.replace(":pool_id", pool.id)}><div>TRADE</div></a>
-  <!-- <a href={ROUTES.pool.replace(":pool_id", pool.id)}>DETAILS</a> -->
+  <div class="pool-links">
+      <a href={ROUTES.swap.replace(":pool_id", pool.id)}>TRADE</a>
+      <a href={ROUTES.pool.replace(":pool_id", pool.id)}>DETAILS</a>
+  </div>
 </div>
 
 <style>
@@ -68,21 +70,24 @@
     font-size: 15px;
   }
   
-  a {
-      text-decoration: none;
-      color: var(--drk_color_one);
-      
+  .pool-links {
+    display: flex;
+    width: 100%;
   }
-  a div {
-      background-color: var(--drk_color_one);
-      color: white;
-      margin: 0px;
-      width: 100%;
-      padding: 3px;
+  
+  .pool-links a {
+    flex: 1;                 /* each link takes equal width */
+    text-decoration: none;
+    color: var(--drk_color_one);
+    background-color: var(--drk_color_one);
+    color: white;
+    padding: 6px;
+    text-align: center;      /* center text */
   }
-  a div:hover {
-      background-color: white;
-      color: var(--drk_color_one);
-      border-top: 1px solid var(--drk_color_one);
+  
+  .pool-links a:hover {
+    background-color: white;
+    color: var(--drk_color_one);
+    border-top: 1px solid var(--drk_color_one);
   }
 </style>
