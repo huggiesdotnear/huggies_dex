@@ -1,9 +1,9 @@
 <script lang="ts">
   import { ROUTES } from "../../ts/routes";
   import type { POOL_RECORD_TYPE } from "../../ts/indexer-db/dexie";
-
+  //
   export let pool: POOL_RECORD_TYPE;
-
+  //
   // Function to format fee percentage
   function formatFee(fee: number): string {
     return (fee / 100).toFixed(2) + "%";
@@ -34,8 +34,7 @@
     overflow: hidden;
     background: white;
     color: var(--drk_color_one);
-    margin-bottom: 1px;
-    margin-top: 1px;
+    margin: 5px;
     padding: 0px;
     width: 500px;
     max-width: 90vw;
