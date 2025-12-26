@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ROUTES } from "../../ts/routes";
   import type { POOL_RECORD_TYPE } from "../../ts/indexer-db/dexie";
+  import { rm_saved_pool_function } from "../../ts/indexer-db/rm-pools";
   //
   export let pool: POOL_RECORD_TYPE;
   //
@@ -8,6 +9,11 @@
   function formatFee(fee: number): string {
     return (fee / 100).toFixed(2) + "%";
   }
+  //
+  function handleRemove() {
+      rm_saved_pool_function(pool.id);
+      location.reload();
+    }
 </script>
 
 <!-- COMPONENT_POOLS_POOL_INFO_CARD -->
@@ -27,6 +33,7 @@
   <div class="pool-links">
       <a href={ROUTES.swap.replace(":pool_id", pool.id)}>TRADE</a>
       <a href={ROUTES.pool.replace(":pool_id", pool.id)}>DETAILS</a>
+      <a href={ROUTES.pools} on:click={handleRemove}>🗑️ RM</a>
   </div>
 </div>
 
