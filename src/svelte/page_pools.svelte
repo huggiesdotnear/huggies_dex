@@ -3,6 +3,7 @@
   import { ROUTES } from "../ts/routes";
   import { number_of_pools } from "./ts/pools_page_pool_count";
   import { ref_contractId_for_network } from "../ts/ref/ref_const";
+  
 </script>
 
 <!--  -->
