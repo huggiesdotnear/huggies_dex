@@ -1,4 +1,5 @@
 # huggies_dex
+
 alternative front end for ref dex smart contract, and web app for huggies meme project
 
 ---
@@ -14,6 +15,9 @@ bun run typecheck
 bun run svelte-check
 bun run preview
 bun run clean
+
+bunx prettier . --write
+bunx prettier . --check
 ```
 
 ---

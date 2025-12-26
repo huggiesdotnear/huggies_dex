@@ -1,49 +1,46 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>HUGGIES</title>
-        <meta name="description" content="huggies near meme and dex app">
-        <link rel="icon" href="/shit_icon_blue.svg" type="image/svg+xml" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
-    </head>
-    <body>
-        <!--<header></header>-->
-        <!--👋 HI-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUGGIES</title>
+    <meta name="description" content="huggies near meme and dex app" />
+    <link rel="icon" href="/shit_icon_blue.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#000000" />
+  </head>
+  <body>
+    <!--<header></header>-->
+    <!--👋 HI-->
 
-        <!--<div id="root"></div>-->
-        <div id="root"></div>
+    <!--<div id="root"></div>-->
+    <div id="root"></div>
 
-        <!--<footer></footer>-->
-        <!--<script></script>-->
-        <script>
-            // Register service worker
-            if ("serviceWorker" in navigator) {
-                window.addEventListener("load", () => {
-                    navigator.serviceWorker
-                        .register("/sw.js")
-                        .then((registration) => {
-                            console.log("SW registered: ", registration);
-                        })
-                        .catch((registrationError) => {
-                            console.log(
-                                "SW registration failed: ",
-                                registrationError,
-                            );
-                        });
-                });
-            }
-        </script>
+    <!--<footer></footer>-->
+    <!--<script></script>-->
+    <script>
+      // Register service worker
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
 
-        <!--goatcounter-->
-        <script
-            data-goatcounter="https://clienttracking.goatcounter.com/count"
-            async
-            src="//gc.zgo.at/count.js"
-        ></script>
-        
-        <!--👋 BYE-->
-    </body>
+    <!--goatcounter-->
+    <script
+      data-goatcounter="https://clienttracking.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+
+    <!--👋 BYE-->
+  </body>
 </html>

@@ -1,7 +1,7 @@
 # HUGGIES DEX DOCS
 
-
 some unique features
+
 - no auto routing
 - create custom trade routes
 - small fee on every trade
@@ -14,7 +14,6 @@ some unique features
 - pnl cards
 - trade feed
 - token holder page for top 100 holders
-
 
 ---
 
