@@ -21,7 +21,7 @@
   let shares_total_supply: string;
   let amp: number;
   //
-  async function update_pool_info() {
+  async function get_and_put_pool_info() {
     const pool_info = await ref_get_pool_function(parsed_route_pool_id);
     pool_kind = pool_info.pool_kind;
     token_account_ids = pool_info.token_account_ids;
@@ -40,7 +40,7 @@
       amp,
     );
   }
-  update_pool_info();
+  get_and_put_pool_info();
 </script>
 
 <!--  -->
