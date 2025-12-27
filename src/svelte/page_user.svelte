@@ -4,6 +4,7 @@
   import { route } from "../ts/routes";
   import { ref_get_deposits_function } from "../ts/ref/ref_functions";
   import COMPONENT_TRADER_DEPOSITS from "./components/profile_deposits_component.svelte";
+  import { USER_REF_BALANCE_STORAGE_KEY } from "../ts/app_consts";
 
   let accountId = $state("");
   let ref_user_deposites = $state({});
@@ -21,6 +22,7 @@
     (async () => {
       const data = await ref_get_deposits_function(accountId);
       ref_user_deposites = data;
+      localStorage.setItem(USER_REF_BALANCE_STORAGE_KEY, JSON.stringify(data));
       console.log("raw:", structuredClone(data)); // clean log
     })();
   });
