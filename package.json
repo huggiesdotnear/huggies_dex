@@ -12,23 +12,23 @@
     "svelte-check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
-    "@lucide/svelte": "^0.555.0",
-    "@sleet-js/ref-exchange-methods-const": "^0.0.1",
+    "@lucide/svelte": "^0.562.0",
+    "@sleet-js/ref-exchange-methods-const": "^0.0.3",
     "@types/js-cookie": "^3.0.6",
     "dexie": "^4.2.1",
     "fastintear": "^0.3.8",
-    "js-cookie": "3.0.4",
-    "sv-router": "^0.11.0",
-    "svelte": "^5.43.14",
+    "js-cookie": "3.0.5",
+    "sv-router": "^0.12.0",
+    "svelte": "^5.46.1",
     "zod": "^4.2.1"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.6.7",
+    "@rsbuild/core": "^1.6.15",
     "@rsbuild/plugin-svelte": "^1.0.11",
-    "@types/bun": "latest",
+    "@types/bun": "^1.3.5",
     "prettier": "3.7.4",
     "prettier-plugin-svelte": "^3.4.1",
-    "svelte-check": "^4.3.4",
+    "svelte-check": "^4.3.5",
     "typescript": "^5.9.3"
   }
 }
