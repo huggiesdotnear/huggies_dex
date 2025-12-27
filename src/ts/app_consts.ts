@@ -13,3 +13,5 @@ export function LAST_POOL_ID_STORAGE_KEY() {
     networkId === "testnet" ? "last_testnet_pool" : "last_mainnet_pool";
   return POOL_ID_STORAGE_KEY as string;
 }
+// user balance
+export const USER_REF_BALANCE_STORAGE_KEY: string = "ref_inner_balance"
