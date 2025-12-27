@@ -15,7 +15,7 @@ interface ref_args_params_interface {
   limit: number;
   fee: number;
   tokens: string[];
-  account_id: string
+  account_id: string;
 }
 // ================================================
 // get_number_of_pools_function
