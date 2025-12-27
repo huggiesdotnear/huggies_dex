@@ -3,6 +3,7 @@ import { NETWORK_STORAGE_KEY } from "./fastintear/createNearClient";
 import { ref_contractId_for_network } from "./ref/ref_const";
 import {
   ref_get_number_of_pools_function,
+  ref_get_deposits_function,
   ref_get_pool_function,
 } from "./ref/ref_functions";
 // ===================================
@@ -31,6 +32,9 @@ async function exampleUsage_of_get_pool() {
   }
 }
 console.log(exampleUsage_of_get_pool());
+console.log("==========================================================");
+const user_deposts = await ref_get_deposits_function("sleet.near")
+console.log("user deposists", user_deposts)
 console.log("==========================================================");
 // ==============================
 // Get all transaction history
