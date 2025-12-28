@@ -1,4 +1,4 @@
-// json-embed.ts — read a JSON file and export both parsed object and original text
+// json-embed.ts — read a JSON file and export original text as a TS const for AssemblyScript
 import fs from "fs";
 
 const inputPath = "./dist/manifest.json";
@@ -6,20 +6,18 @@ const outputPath = "./assembly/manifest.ts";
 
 const jsonText = fs.readFileSync(inputPath, { encoding: "utf8" });
 
-// Validate JSON and emit both forms
-let parsed: unknown;
+// Validate JSON (to fail fast on broken manifests)
 try {
-  parsed = JSON.parse(jsonText);
+  JSON.parse(jsonText);
 } catch (e) {
   throw new Error(`Invalid JSON in ${inputPath}: ${(e as Error).message}`);
 }
 
-fs.writeFileSync(
-  outputPath,
-  [
-    `export const jsonText = \`${jsonText.replace(/`/g, "\\`")}\`;`,
-    `export const json = ${JSON.stringify(parsed)};`,
-    `\n`,
-  ].join("\n"),
-);
+// Escape backticks so the template literal stays valid
+const escaped = jsonText.replace(/`/g, "\\`");
+
+// Write AssemblyScript module with typed string export
+const out = `export const jsonText: string = \`${escaped}\`;\n`;
+
+fs.writeFileSync(outputPath, out);
 console.log(`Wrote ${outputPath}`);

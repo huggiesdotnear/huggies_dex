@@ -6,18 +6,18 @@ import { svg } from "./svg";
 // ===========================================================
 @nearBindgen
 class Web4Request {
-  accountId?: string | null;
-  path?: string;
-  params?: Map<string, string>;
-  query?: Map<string, Array<string>>;
-  preloads?: Map<string, Web4Response>;
+  accountId: string | null;
+  path: string;
+  params: Map<string, string>;
+  query: Map<string, Array<string>>;
+  preloads: Map<string, Web4Response>;
 }
 @nearBindgen
 class Web4Response {
-  contentType?: string;
-  status?: u32;
-  body?: Uint8Array;
-  bodyUrl?: string;
+  contentType: string;
+  status: u32;
+  body: Uint8Array;
+  bodyUrl: string;
   preloadUrls: string[] = [];
 }
 // ===========================================================
