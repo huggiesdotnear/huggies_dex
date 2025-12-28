@@ -70,7 +70,7 @@ export function web4_get(request: Web4Request): Web4Response {
     return jsResponse(js);
   }
 
-  return status(404);
+  return htmlResponse(decodeURI(html));
 }
 // ===========================================================
 // ===========================================================
