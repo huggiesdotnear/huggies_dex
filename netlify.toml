@@ -1,0 +1,22 @@
+[build]
+  publish = "dist"
+
+[[redirects]]
+  from = "/manifest.json"
+  to   = "/manifest.json"
+  status = 200
+
+[[redirects]]
+  from = "/sw.js"
+  to   = "/sw.js"
+  status = 200
+
+[[redirects]]
+  from = "/shit_icon_blue.svg"
+  to   = "/shit_icon_blue.svg"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
