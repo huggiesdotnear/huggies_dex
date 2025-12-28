@@ -1,5 +1,5 @@
 import { util } from 'near-sdk-as'
-import { html } from '../dist/index'
+import { html } from './html'
 
 @nearBindgen
 class Web4Request {

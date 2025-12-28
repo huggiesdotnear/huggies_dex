@@ -20,6 +20,12 @@ bunx prettier . --write
 bunx prettier . --check
 ```
 
+depoy to web4
+```sh
+bun run htmlto.js
+bun run asb
+```
+
 ---
 
 copyright 2025 by sleet.near
