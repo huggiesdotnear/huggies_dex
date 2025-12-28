@@ -1,4 +1,4 @@
-export const js = `const CACHE_NAME = "huggies-cache-v1";
+export const sw = `const CACHE_NAME = "huggies-cache-v1";
 const urlsToCache = ["/shit_icon_blue.svg", "/manifest.json"];
 
 // Install event - cache assets

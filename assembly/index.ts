@@ -1,6 +1,6 @@
 import { util } from "near-sdk-as";
 import { html } from "./html";
-import { js } from "./sw";
+import { sw } from "./sw";
 import { jsonText } from "./manifest"; // use raw manifest text
 import { svg } from "./svg";
 // ===========================================================
@@ -67,7 +67,7 @@ export function web4_get(request: Web4Request): Web4Response {
     return svgResponse(svg);
   }
   if (path == "/sw.js") {
-    return jsResponse(js);
+    return jsResponse(sw);
   }
 
   return htmlResponse(decodeURI(html));
