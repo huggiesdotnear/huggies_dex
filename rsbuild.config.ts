@@ -7,10 +7,8 @@ export default defineConfig({
   html: {
     template: "./public/index.html",
   },
-  output: {
-    // Inline JS files directly into HTML
-    inlineScripts: true,
-    // Inline CSS files directly into HTML
-    inlineStyles: true,
-  },
+  // output: {
+  //   inlineScripts: true,
+  //   inlineStyles: true,
+  // },
 });
