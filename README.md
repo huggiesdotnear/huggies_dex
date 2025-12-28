@@ -20,25 +20,6 @@ bunx prettier . --write
 bunx prettier . --check
 ```
 
-depoy to web4
-
-```sh
-# build web part first
-bun run build
-bun run dist_to_as/convert_all.ts
-bun run dist_to_as/htmlto.ts
-bun run dist_to_as/jsto.ts
-bun run dist_to_as/swto.ts
-bun run dist_to_as/svgto.ts
-bun run dist_to_as/jsonto.ts
-bun run asb
-```
-
-deploy with near cli
-```sh
-near deploy web4.huggies.testnet build/release/huggies_dex.wasm
-near deploy web4.huggies.near build/release/huggies_dex.wasm
-```
 
 ---
 
