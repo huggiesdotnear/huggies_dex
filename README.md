@@ -31,6 +31,12 @@ bun run dist_to_as/jsonto.ts
 bun run asb
 ```
 
+deploy with near cli
+```sh
+near deploy web4.huggies.testnet build/release/huggies_dex.wasm
+near deploy web4.huggies.near build/release/huggies_dex.wasm
+```
+
 ---
 
 copyright 2025 by sleet.near
