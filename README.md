@@ -20,6 +20,10 @@ bunx prettier . --write
 bunx prettier . --check
 ```
 
+bndl
+```sh
+makebndl "dist/index.html:html" "dist/manifest.json:json" "dist/sw.js:js" "dist/static/css/*.css:css" "dist/static/js/*.js:js" "dist/static/js/**/*.js:js" "dist/static/js/**/*.txt:txt" "dist/*.svg:svg" -o dist.bndl
+```
 
 ---
 
