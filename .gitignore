@@ -3,6 +3,17 @@ assembly/html.ts
 #assembly/sw.ts
 #assembly/manifest.ts
 #assembly/svg.ts
+asset_index_html.ts
+asset_manifest_json.ts
+asset_shit_icon_blue_svg.ts
+asset_static_css_index_7662d085_css.ts
+asset_static_js_404_50274563_js.ts
+asset_static_js_404_50274563_js_LICENSE_txt.ts
+asset_static_js_async_262_523c5fd2_js.ts
+asset_static_js_index_a06e7fca_js.ts
+asset_sw_js.ts
+assets.ts
+
 
 # Local
 .DS_Store
