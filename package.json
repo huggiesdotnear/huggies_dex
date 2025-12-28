@@ -19,6 +19,7 @@
     "dexie": "^4.2.1",
     "fastintear": "^0.3.8",
     "js-cookie": "3.0.5",
+    "near-sdk-as": "^3.2.3",
     "sv-router": "^0.12.0",
     "svelte": "^5.46.1",
     "zod": "^4.2.1"
