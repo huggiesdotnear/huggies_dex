@@ -33,8 +33,8 @@ async function exampleUsage_of_get_pool() {
 }
 console.log(exampleUsage_of_get_pool());
 console.log("==========================================================");
-const user_deposts = await ref_get_deposits_function("sleet.near")
-console.log("user deposists", user_deposts)
+const user_deposts = await ref_get_deposits_function("sleet.near");
+console.log("user deposists", user_deposts);
 console.log("==========================================================");
 // ==============================
 // Get all transaction history

@@ -2,7 +2,7 @@ import { nearClient } from "../fastintear/createNearClient";
 import { ft_methods_const } from "@sleet-js/ft-methods-const";
 // ================================================
 interface ft_args_params_interface {
-  token_contractId: string
+  token_contractId: string;
   msg: string;
   amount: string;
   receiver_id: string;

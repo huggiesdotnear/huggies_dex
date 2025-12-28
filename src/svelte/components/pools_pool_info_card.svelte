@@ -11,9 +11,9 @@
   }
   //
   function handleRemove() {
-      rm_saved_pool_function(pool.id);
-      location.reload();
-    }
+    rm_saved_pool_function(pool.id);
+    location.reload();
+  }
 </script>
 
 <!-- COMPONENT_POOLS_POOL_INFO_CARD -->
@@ -31,9 +31,9 @@
     {/each}
   </div>
   <div class="pool-links">
-      <a href={ROUTES.swap.replace(":pool_id", pool.id)}>TRADE</a>
-      <!-- <a href={ROUTES.pool.replace(":pool_id", pool.id)}>DETAILS</a> -->
-      <a href={ROUTES.pools} on:click={handleRemove}>🗑️ RM</a>
+    <a href={ROUTES.swap.replace(":pool_id", pool.id)}>TRADE</a>
+    <!-- <a href={ROUTES.pool.replace(":pool_id", pool.id)}>DETAILS</a> -->
+    <a href={ROUTES.pools} on:click={handleRemove}>🗑️ RM</a>
   </div>
 </div>
 
@@ -76,22 +76,22 @@
     text-align: left;
     font-size: 15px;
   }
-  
+
   .pool-links {
     display: flex;
     width: 100%;
   }
-  
+
   .pool-links a {
-    flex: 1;                 /* each link takes equal width */
+    flex: 1; /* each link takes equal width */
     text-decoration: none;
     color: var(--drk_color_one);
     background-color: var(--drk_color_one);
     color: white;
     padding: 6px;
-    text-align: center;      /* center text */
+    text-align: center; /* center text */
   }
-  
+
   .pool-links a:hover {
     background-color: white;
     color: var(--drk_color_one);

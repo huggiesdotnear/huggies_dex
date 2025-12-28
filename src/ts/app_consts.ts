@@ -14,4 +14,4 @@ export function LAST_POOL_ID_STORAGE_KEY() {
   return POOL_ID_STORAGE_KEY as string;
 }
 // user balance
-export const USER_REF_BALANCE_STORAGE_KEY: string = "ref_inner_balance"
+export const USER_REF_BALANCE_STORAGE_KEY: string = "ref_inner_balance";

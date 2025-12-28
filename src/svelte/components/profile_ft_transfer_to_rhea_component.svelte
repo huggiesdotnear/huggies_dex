@@ -6,7 +6,6 @@
   import { ref_contractId_for_network } from "../../ts/ref/ref_const";
   import { get_nearClient_accountId } from "../../ts/fastintear/accountId";
   // ================================================================
-  
 </script>
 
 <!--  -->
