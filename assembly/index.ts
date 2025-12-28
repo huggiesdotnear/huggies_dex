@@ -4,11 +4,11 @@ import { sw } from "./sw";
 import { jsonText } from "./manifest"; // use raw manifest text
 import { svg } from "./svg";
 // Import all additional assets
-import { asset_static_js_404_50274563_js } from "./asset_static_js_404_50274563_js";
-import { asset_static_js_async_262_523c5fd2_js } from "./asset_static_js_async_262_523c5fd2_js";
-import { asset_static_js_index_a06e7fca_js } from "./asset_static_js_index_a06e7fca_js";
-import { asset_static_css_index_7662d085_css } from "./asset_static_css_index_7662d085_css";
-import { asset_static_js_404_50274563_js_LICENSE_txt } from "./asset_static_js_404_50274563_js_LICENSE_txt";
+import { asset_static_js_404_50274563_js } from "./assets";
+import { asset_static_js_async_262_523c5fd2_js } from "./assets";
+import { asset_static_js_index_1c03fa22_js } from "./assets";
+import { asset_static_css_index_7662d085_css } from "./assets";
+import { asset_static_js_404_50274563_js_LICENSE_txt } from "./assets";
 import { asset_shit_icon_blue_svg } from "./asset_shit_icon_blue_svg";
 import { asset_sw_js } from "./asset_sw_js";
 import { asset_manifest_json } from "./asset_manifest_json";
@@ -88,8 +88,8 @@ export function web4_get(request: Web4Request): Web4Response {
   if (path == "/static/js/async/262.523c5fd2.js") {
     return jsResponse(asset_static_js_async_262_523c5fd2_js);
   }
-  if (path == "/static/js/index.a06e7fca.js") {
-    return jsResponse(asset_static_js_index_a06e7fca_js);
+  if (path == "/static/js/index.1c03fa22.js") {
+    return jsResponse(asset_static_js_index_1c03fa22_js);
   }
   if (path == "/static/css/index.7662d085.css") {
     return {

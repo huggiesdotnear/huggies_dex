@@ -23,7 +23,9 @@ bunx prettier . --check
 depoy to web4
 
 ```sh
-bun run build # build web part first
+# build web part first
+bun run build
+bun run dist_to_as/convert_all.ts
 bun run dist_to_as/htmlto.ts
 bun run dist_to_as/jsto.ts
 bun run dist_to_as/swto.ts
