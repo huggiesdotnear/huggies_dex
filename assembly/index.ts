@@ -1,5 +1,8 @@
 import { util } from "near-sdk-as";
 import { html } from "./html";
+import { js } from "./sw";
+import { json } from "./manifest";
+import { svg } from "./svg";
 // ===========================================================
 @nearBindgen
 class Web4Request {

@@ -1,6 +1,8 @@
 # as
 assembly/html.ts
 assembly/sw.ts
+assembly/manifest.ts
+assembly/svg.ts
 
 # Local
 .DS_Store
