@@ -1,11 +1,11 @@
 import fs from 'fs';
 
-const inputPath = './dist/index.html';
-const outputPath = './assembly/html.ts';
+const inputPath = './dist/sw.js';
+const outputPath = './assembly/sw.ts';
 
 const file = fs.readFileSync(inputPath, { encoding: 'utf8' });
 fs.writeFileSync(
   outputPath,
-  `export const html = \`${encodeURI(file)}\`;\n`
+  `export const js = \`${file.replace(/`/g, '\\`')}\`;\n`
 );
 console.log(`Wrote ${outputPath}`);
