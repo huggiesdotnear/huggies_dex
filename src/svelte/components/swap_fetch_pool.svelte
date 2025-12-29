@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ROUTES } from "../../ts/routes";
-  let pool_id: string;
+  import { LAST_POOL_ID_STORAGE_KEY } from "../../ts/app_consts";
+  let pool_id: string = localStorage.getItem(LAST_POOL_ID_STORAGE_KEY()) ?? ""
 </script>
 
 <!--  -->

@@ -6,7 +6,6 @@
   // ===========================================
   // ROUTE PARAMS
   import { route, ROUTES } from "../ts/routes";
-  import { number_of_pools } from "./ts/pools_page_pool_count";
   const raw_route_pool_id = (route.params as Record<string, string>)["pool_id"];
   const parsed_route_pool_id = Number(raw_route_pool_id);
   console.log("SWAP ROUTE POOL ID:", parsed_route_pool_id);
@@ -16,14 +15,16 @@
   import { ref_get_pool_function } from "../ts/ref/ref_functions";
   import { put_pool_function } from "../ts/indexer-db/put-pools";
   import { ref_contractId_for_network } from "../ts/ref/ref_const";
-  //
+  import { number_of_pools } from "./ts/pools_page_pool_count";
+  import { LAST_POOL_ID_STORAGE_KEY } from "../ts/app_consts";
+  // ===========================================
   let pool_kind: string;
   let token_account_ids: string[];
   let amounts: string[];
   let total_fee: number;
   let shares_total_supply: string;
   let amp: number;
-  //
+  // ===========================================
   async function get_and_put_pool_info() {
     const pool_info = await ref_get_pool_function(parsed_route_pool_id);
     pool_kind = pool_info.pool_kind;
@@ -44,6 +45,12 @@
     );
   }
   get_and_put_pool_info();
+  // ===========================================
+  function set_last_pool_id() {
+    localStorage.setItem(LAST_POOL_ID_STORAGE_KEY(), raw_route_pool_id)
+    console.log(LAST_POOL_ID_STORAGE_KEY(), "saved", raw_route_pool_id)
+  }
+  set_last_pool_id()
 </script>
 
 <!--  -->
