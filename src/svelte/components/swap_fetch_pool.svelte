@@ -10,7 +10,7 @@
 <!-- COMPONENT_SWAP_POOL_LINK -->
 <div>
   <div><input type="number" bind:value={pool_id} /></div>
-  <a href={ROUTES.swap.replace(":pool_id", pool_id)}><button>TRADE</button></a>
+  <a href={ROUTES.swap.replace(":pool_id", pool_id)}><button>LOAD</button></a>
 </div>
 
 <!--  -->

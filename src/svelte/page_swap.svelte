@@ -16,6 +16,7 @@
   import { LAST_POOL_ID_STORAGE_KEY } from "../ts/app_consts";
   // ===========================================
   // primitives
+  let pool_id = $state<number>(0);
   let pool_kind = $state<string>("");
   let total_fee = $state<number>(0);
   let shares_total_supply = $state<string>("");
@@ -63,6 +64,7 @@
         const pool_info = await ref_get_pool_function(parsed_route_pool_id);
 
         // Assign primitives
+        pool_id = parsed_route_pool_id;
         pool_kind = pool_info.pool_kind ?? "";
         total_fee = pool_info.total_fee ?? 0;
         shares_total_supply = pool_info.shares_total_supply ?? "";
@@ -117,12 +119,12 @@
   <COMPONENT_SWAP_POOL_LINK />
   <!--  -->
   <COMPONENT_SWAP_POOL_INFO_CARD
+    {pool_id}
     {pool_kind}
     {token_account_ids}
     {amounts}
     {total_fee}
     {shares_total_supply}
-    {amp}
   />
   <!--  -->
   <p></p>

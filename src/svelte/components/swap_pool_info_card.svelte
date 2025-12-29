@@ -1,15 +1,21 @@
 <!--  -->
 <!--  -->
 <script lang="ts">
-  import type { REF_GET_POOL_TYPE } from "../../ts/ref/ref_types";
+  // import type { REF_GET_POOL_TYPE } from "../../ts/ref/ref_types";
   // ===========================================
   let {
+    pool_id,
     pool_kind,
     token_account_ids,
     amounts,
     total_fee,
     shares_total_supply,
-  }: REF_GET_POOL_TYPE = $props();
+  } = $props();
+  // ==========================================
+  // Function to format fee percentage
+  function formatFee(fee: number): string {
+    return (fee / 100).toFixed(2) + "%";
+  }
 </script>
 
 <!--  -->
@@ -18,14 +24,13 @@
 
 <!-- COMPONENT_SWAP_POOL_INFO_CARD -->
 <div>
-  <p>KIND: {pool_kind}</p>
+  <p>POOL ID: {pool_id} :: KIND: {pool_kind}</p>
   <p>TOKENS:</p>
   <p>{token_account_ids?.[0]}</p>
   <p>{amounts?.[0]}</p>
   <p>{token_account_ids?.[1]}</p>
   <p>{amounts?.[1]}</p>
-  <p>FEE: {total_fee}</p>
-  <p>SHARES: {shares_total_supply}</p>
+  <p>FEE: {formatFee(total_fee)} :: SHARES: {shares_total_supply}</p>
   <!-- <p>{amp}</p> -->
 </div>
 
@@ -36,7 +41,7 @@
 <style>
   div {
     background-color: white;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
     color: var(--drk_color_one);
     width: 500px;
     max-width: 90vw;
