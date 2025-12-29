@@ -15,44 +15,91 @@
   import { number_of_pools } from "./ts/pools_page_pool_count";
   import { LAST_POOL_ID_STORAGE_KEY } from "../ts/app_consts";
   // ===========================================
-  let pool_kind: string;
-  let token_account_ids: string[];
-  let amounts: string[];
-  let total_fee: number;
-  let shares_total_supply: string;
-  let amp: number;
+  // primitives
+  let pool_kind = $state<string>("");
+  let total_fee = $state<number>(0);
+  let shares_total_supply = $state<string>("");
+  let amp = $state<number>(0);
+  let token_account_ids = $state<string[]>([]);
+  let amounts = $state<string[]>([]);
   // ===========================================
   // ===========================================
-  const raw_route_pool_id = (route.params as Record<string, string>)["pool_id"];
-  const parsed_route_pool_id = Number(raw_route_pool_id);
-  console.log("SWAP ROUTE POOL ID:", parsed_route_pool_id);
+  // Keep route param reactive
+  let raw_route_pool_id = $state<string>(
+    (route.params as Record<string, string>)["pool_id"] ?? "",
+  );
+  // Derive parsed id reactively when raw id changes
+  let parsed_route_pool_id = $state<number>(NaN);
+  $effect(() => {
+    const n = Number(raw_route_pool_id);
+    parsed_route_pool_id = Number.isFinite(n) ? n : NaN;
+  });
   // ===========================================
-  async function get_and_put_pool_info() {
-    const pool_info = await ref_get_pool_function(parsed_route_pool_id);
-    pool_kind = pool_info.pool_kind;
-    token_account_ids = pool_info.token_account_ids;
-    amounts = pool_info.amounts;
-    total_fee = pool_info.total_fee;
-    shares_total_supply = pool_info.shares_total_supply;
-    amp = pool_info.amp;
+  // Persist last pool_id whenever it changes
+  $effect(() => {
+    if (raw_route_pool_id) {
+      // localStorage requires strings
+      localStorage.setItem(LAST_POOL_ID_STORAGE_KEY(), raw_route_pool_id);
+      console.log(LAST_POOL_ID_STORAGE_KEY(), "saved", raw_route_pool_id);
+    }
+  });
+  // ===========================================
+  // Fetch and populate pool info whenever parsed id changes
+  $effect(() => {
+    async function run() {
+      if (!Number.isFinite(parsed_route_pool_id)) {
+        console.warn("Invalid pool_id:", raw_route_pool_id);
+        // Reset state on invalid id
+        pool_kind = "";
+        token_account_ids = [];
+        amounts = [];
+        total_fee = 0;
+        shares_total_supply = "";
+        amp = 0;
+        return;
+      }
 
-    put_pool_function(
-      raw_route_pool_id,
-      pool_kind,
-      token_account_ids,
-      amounts,
-      total_fee,
-      shares_total_supply,
-      amp,
-    );
-  }
-  get_and_put_pool_info();
+      try {
+        const pool_info = await ref_get_pool_function(parsed_route_pool_id);
+
+        // Assign primitives
+        pool_kind = pool_info.pool_kind ?? "";
+        total_fee = pool_info.total_fee ?? 0;
+        shares_total_supply = pool_info.shares_total_supply ?? "";
+        amp = pool_info.amp ?? 0;
+
+        // Arrays: assign, they are proxied by $state
+        token_account_ids = Array.isArray(pool_info.token_account_ids)
+          ? pool_info.token_account_ids
+          : [];
+        amounts = Array.isArray(pool_info.amounts) ? pool_info.amounts : [];
+
+        // If external consumers shouldn't receive proxies, snapshot before passing
+        put_pool_function(
+          raw_route_pool_id,
+          pool_kind,
+          $state.snapshot(token_account_ids),
+          $state.snapshot(amounts),
+          total_fee,
+          shares_total_supply,
+          amp,
+        );
+      } catch (err) {
+        console.error("Failed to fetch pool info:", err);
+        // Optional: reset state or show an error UI state
+      }
+    }
+    run();
+  });
   // ===========================================
-  function set_last_pool_id() {
-    localStorage.setItem(LAST_POOL_ID_STORAGE_KEY(), raw_route_pool_id);
-    console.log(LAST_POOL_ID_STORAGE_KEY(), "saved", raw_route_pool_id);
-  }
-  set_last_pool_id();
+  // Optional: react to route changes (if your route object updates in-place)
+  // If route.params["pool_id"] can change, update raw_route_pool_id reactively:
+  $effect(() => {
+    const poolId = (route.params as Record<string, string>)["pool_id"];
+    if (poolId && poolId !== raw_route_pool_id) {
+      raw_route_pool_id = poolId;
+    }
+  });
   // ===========================================
   // ===========================================
 </script>
