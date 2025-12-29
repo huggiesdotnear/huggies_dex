@@ -4,7 +4,11 @@
 <!--  -->
 
 <!-- COMPONENT_SWAP_SWAP -->
-<div></div>
+<div>
+    <p></p>
+    SWAP COMPONENT COMING SOON!
+    <p></p>
+</div>
 
 <!--  -->
 <!--  -->

@@ -9,6 +9,7 @@
   // ===========================================
   import COMPONENT_SWAP_POOL_INFO_CARD from "./components/swap_pool_info_card.svelte";
   import COMPONENT_SWAP_POOL_LINK from "./components/swap_fetch_pool.svelte";
+  import COMPONENT_SWAP_SWAP from "./components/swap_swap_component.svelte"
   import { ref_get_pool_function } from "../ts/ref/ref_functions";
   import { put_pool_function } from "../ts/indexer-db/put-pools";
   import { ref_contractId_for_network } from "../ts/ref/ref_const";
@@ -117,6 +118,8 @@
   <p>there are {number_of_pools} on {ref_contractId_for_network()}</p>
   <!--  -->
   <COMPONENT_SWAP_POOL_LINK />
+  <!--  -->
+  <COMPONENT_SWAP_SWAP/>
   <!--  -->
   <COMPONENT_SWAP_POOL_INFO_CARD
     {pool_id}
