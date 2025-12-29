@@ -1,0 +1,27 @@
+<script lang="ts">
+  import { ROUTES } from "../../ts/routes";
+  let pool_id: string;
+</script>
+
+<!--  -->
+<!--  -->
+
+<!-- COMPONENT_SWAP_POOL_LINK -->
+<div>
+  <div><input type="number" bind:value={pool_id} /></div>
+  <a href={ROUTES.swap.replace(":pool_id", pool_id)}><button>TRADE</button></a>
+</div>
+
+<!--  -->
+<!--  -->
+<style>
+  input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 500px;
+    max-width: 90vw;
+    margin: 2px;
+    display: inline-block;
+    padding: 5px;
+  }
+</style>

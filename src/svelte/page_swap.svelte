@@ -5,14 +5,17 @@
 <script lang="ts">
   // ===========================================
   // ROUTE PARAMS
-  import { route } from "../ts/routes";
+  import { route, ROUTES } from "../ts/routes";
+  import { number_of_pools } from "./ts/pools_page_pool_count";
   const raw_route_pool_id = (route.params as Record<string, string>)["pool_id"];
   const parsed_route_pool_id = Number(raw_route_pool_id);
   console.log("SWAP ROUTE POOL ID:", parsed_route_pool_id);
   // ===========================================
   import COMPONENT_SWAP_POOL_INFO_CARD from "./components/swap_pool_info_card.svelte";
+  import COMPONENT_SWAP_POOL_LINK from "./components/swap_fetch_pool.svelte"
   import { ref_get_pool_function } from "../ts/ref/ref_functions";
   import { put_pool_function } from "../ts/indexer-db/put-pools";
+  import { ref_contractId_for_network } from "../ts/ref/ref_const";
   //
   let pool_kind: string;
   let token_account_ids: string[];
@@ -51,6 +54,10 @@
 <!-- SWAP_PAGE -->
 <section>
   <h1>SWAP</h1>
+  <p>there are {number_of_pools} on {ref_contractId_for_network()}</p>
+  <!--  -->
+  <COMPONENT_SWAP_POOL_LINK/>
+  <!--  -->
   <COMPONENT_SWAP_POOL_INFO_CARD
     {pool_kind}
     {token_account_ids}
@@ -59,5 +66,9 @@
     {shares_total_supply}
     {amp}
   />
+  <!--  -->
+  <p></p>
+  <a href={ROUTES.add_pool}><button>CREATE NEW POOL</button></a>
+  <!--  -->
   <p></p>
 </section>
