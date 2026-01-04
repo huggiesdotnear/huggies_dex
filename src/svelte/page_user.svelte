@@ -4,6 +4,7 @@
   import { route } from "../ts/routes";
   import { ref_get_deposits_function } from "../ts/ref/ref_functions";
   import COMPONENT_TRADER_DEPOSITS from "./components/profile_deposits_component.svelte";
+  import COMPONENT_TRADER_FT_TRANSFER_DEPOSIT from "./components/profile_ft_transfer_to_rhea_component.svelte"
   import { USER_REF_BALANCE_STORAGE_KEY } from "../ts/app_consts";
 
   let accountId = $state("");
@@ -37,4 +38,5 @@
 <section>
   <h1>TRADER: {accountId}</h1>
   <COMPONENT_TRADER_DEPOSITS {ref_user_deposites} />
+  <COMPONENT_TRADER_FT_TRANSFER_DEPOSIT/>
 </section>
