@@ -4,7 +4,7 @@
     ft_transfer_call_function,
   } from "../../ts/ft/ft_functions";
   import { ref_contractId_for_network } from "../../ts/ref/ref_const";
-  import { get_nearClient_accountId } from "../../ts/fastintear/accountId";
+  // import { get_nearClient_accountId } from "../../ts/fastintear/accountId";
   import { DEFAULT_TOKEN_ID } from "../../ts/app_consts";
   // ================================================================
   let token_id = DEFAULT_TOKEN_ID();
