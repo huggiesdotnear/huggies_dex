@@ -16,10 +16,11 @@ interface ref_args_params_interface {
   fee: number;
   tokens: string[];
   account_id: string;
+  token_id: string;
+  amount: string;
 }
 // ================================================
-// get_number_of_pools_function
-// Fetch the total number of pools
+// ref_get_number_of_pools_function
 export async function ref_get_number_of_pools_function(): Promise<number> {
   const result = await nearClient().view({
     contractId: ref_contractId_for_network(),
@@ -29,7 +30,7 @@ export async function ref_get_number_of_pools_function(): Promise<number> {
   return result as number;
 }
 // ================================================
-// get_pool_function
+// ref_get_pool_function
 export async function ref_get_pool_function(
   pool_id: ref_args_params_interface["pool_id"],
 ): Promise<REF_GET_POOL_TYPE> {
@@ -42,7 +43,7 @@ export async function ref_get_pool_function(
   return REF_GET_POOL_TYPE_Z_CONST.parse(result);
 }
 // ================================================
-// get_deposits_function
+// ref_get_deposits_function
 export async function ref_get_deposits_function(
   accountId: ref_args_params_interface["account_id"],
 ): Promise<REF_GET_DEPOSITS_TYPE> {
@@ -55,7 +56,7 @@ export async function ref_get_deposits_function(
   return result as REF_GET_DEPOSITS_TYPE;
 }
 // ================================================
-// get_pools_function
+// ref_get_pools_function
 export async function ref_get_pools_function(
   from_index: ref_args_params_interface["from_index"],
   limit: ref_args_params_interface["limit"],
@@ -69,7 +70,7 @@ export async function ref_get_pools_function(
   return REF_GET_POOLS_TYPE_Z_CONST.parse(result);
 }
 // ================================================
-// add_simple_pool_function
+// ref_add_simple_pool_function
 export async function ref_add_simple_pool_function(
   fee: ref_args_params_interface["fee"],
   tokens: ref_args_params_interface["tokens"],
@@ -82,6 +83,31 @@ export async function ref_add_simple_pool_function(
         args: { fee: fee, tokens: tokens },
         gas: "30000000000000", // 30 TGas
         deposit: "9000000000000000000000", // 0.009
+      }),
+    ],
+  });
+  console.log(result);
+  return result;
+}
+// ================================================
+// ref_withdraw_function
+export async function ref_withdraw_function(
+  amount: ref_args_params_interface["amount"],
+  token_id: ref_args_params_interface["token_id"],
+) {
+  const result = await nearClient().sendTx({
+    receiverId: ref_contractId_for_network(),
+    actions: [
+      nearClient().actions.functionCall({
+        methodName: ref_exchange_methods_const.withdraw,
+        args: {
+          amount: amount,
+          token_id: token_id,
+          unregister: false,
+          skip_unwrap_near: false,
+        },
+        gas: "30000000000000", // 30 TGas
+        deposit: "1",
       }),
     ],
   });
