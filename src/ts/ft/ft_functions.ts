@@ -7,6 +7,7 @@ interface ft_args_params_interface {
   amount: string;
   receiver_id: string;
   account_id: string;
+  gas: string
 }
 // ================================================
 // ft_balance_of_function
@@ -29,6 +30,7 @@ export async function ft_transfer_call_function(
   msg: ft_args_params_interface["msg"],
   amount: ft_args_params_interface["amount"],
   receiver_id: ft_args_params_interface["receiver_id"],
+  gas: ft_args_params_interface["gas"],
 ) {
   const result = await nearClient().sendTx({
     receiverId: token_contractId,
@@ -36,7 +38,7 @@ export async function ft_transfer_call_function(
       nearClient().actions.functionCall({
         methodName: ft_methods_const.ft_transfer_call,
         args: { msg: msg, amount: amount, receiver_id: receiver_id },
-        gas: "30000000000000", // 30 TGas
+        gas: gas,
         deposit: "1",
       }),
     ],

@@ -11,10 +11,11 @@
   let token_id = DEFAULT_TOKEN_ID();
   let amount: string;
   let receiver_id = ref_contractId_for_network();
-  let msg = "HUGGIES UI RHEA DEPOSIT"
+  let msg = "";
+  let gas = "50000000000000";
   
   async function deposit() {
-    await ft_transfer_call_function(token_id, msg, amount, receiver_id);
+    await ft_transfer_call_function(token_id, msg, amount, receiver_id, gas);
   }
   async function withdraw() {
     await ref_withdraw_function (amount, token_id)
@@ -30,7 +31,7 @@
   <p>TOKEN ID:</p>
   <input type="text" bind:value={token_id}/>
   <p>AMOUNT:</p>
-  <input type="number" bind:value={amount}/>
+  <input type="text" bind:value={amount}/>
   <button type="submit" on:click={deposit}>DEPOSIT</button>
   <button type="submit" on:click={withdraw}>WITHDRAW</button>
 </from>
