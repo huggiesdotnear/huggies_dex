@@ -3,6 +3,7 @@
     // ft_balance_of_function,
     ft_transfer_call_function,
   } from "../../ts/ft/ft_functions";
+  import { ref_withdraw_function } from "../../ts/ref/ref_functions";
   import { ref_contractId_for_network } from "../../ts/ref/ref_const";
   // import { get_nearClient_accountId } from "../../ts/fastintear/accountId";
   import { DEFAULT_TOKEN_ID } from "../../ts/app_consts";
@@ -15,6 +16,9 @@
   async function deposit() {
     await ft_transfer_call_function(token_id, msg, amount, receiver_id);
   }
+  async function withdraw() {
+    await ref_withdraw_function (amount, token_id)
+  }
 </script>
 
 <!--  -->
@@ -22,12 +26,13 @@
 
 <!-- COMPONENT_RHEA_DEPOSIT_WITHDRAW -->
 <from>
-  <h4>DEPOSIT</h4>
+  <h4>DEPOSIT/WITHDRAW</h4>
   <p>TOKEN ID:</p>
   <input type="text" bind:value={token_id}/>
   <p>AMOUNT:</p>
   <input type="number" bind:value={amount}/>
   <button type="submit" on:click={deposit}>DEPOSIT</button>
+  <button type="submit" on:click={withdraw}>WITHDRAW</button>
 </from>
 
 <!--  -->
@@ -60,6 +65,6 @@
       margin-bottom: 3px;
       padding: 10px;
       /*border: 1px solid #ccc;*/
-      font: inherit;
+      /*font: inherit;*/
   }
 </style>
