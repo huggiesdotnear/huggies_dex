@@ -3,7 +3,7 @@
 import { nearClient } from "../fastintear/createNearClient";
 import { ref_exchange_methods_const } from "@sleet-js/ref-exchange-methods-const";
 import { ref_contractId_for_network } from "./ref_const";
-import type { REF_GET_POOL_TYPE, REF_GET_DEPOSITS_TYPE } from "./ref_types";
+import type { REF_GET_POOL_TYPE, REF_GET_DEPOSITS_TYPE, STORAGE_BALANCE_OF_RESPONSE_TYPE } from "./ref_types";
 import {
   REF_GET_POOL_TYPE_Z_CONST,
   REF_GET_POOLS_TYPE_Z_CONST,
@@ -114,6 +114,19 @@ export async function ref_withdraw_function(
   });
   console.log(result);
   return result;
+}
+// ================================================
+// ref_get_deposits_function
+export async function ref_storage_balance_of_function(
+  accountId: ref_args_params_interface["account_id"],
+): Promise<STORAGE_BALANCE_OF_RESPONSE_TYPE> {
+  const result = await nearClient().view({
+    contractId: ref_contractId_for_network(),
+    methodName: ref_exchange_methods_const.storage_balance_of,
+    args: { account_id: accountId },
+  });
+
+  return result as STORAGE_BALANCE_OF_RESPONSE_TYPE;
 }
 // ================================================
 // ref_storage_deposit_function

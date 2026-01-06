@@ -26,6 +26,11 @@ export interface REF_GET_DEPOSITS_TYPE {
   [key: string]: string;
 }
 // ================================================
+export interface STORAGE_BALANCE_OF_RESPONSE_TYPE {
+  total: string;
+  available: string;
+}
+
 // ================================================
 // ================================================
 // copyright 2025 by sleet.near
