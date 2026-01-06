@@ -20,7 +20,7 @@
 <!--  -->
 <!--  -->
 
-<!-- COMPONENT_TRADER_FT_TRANSFER_DEPOSIT -->
+<!-- COMPONENT_RHEA_DEPOSIT_WITHDRAW -->
 <from>
   <h4>DEPOSIT</h4>
   <p>TOKEN ID:</p>
@@ -41,13 +41,25 @@
     background: white;
     color: #474747;
     padding: 20px;
+    box-sizing: border-box;
+    
   }
   input {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 20px;
       width: 500px;
       max-width: 90vw;
-      padding: 2px;
-      margin: 0px;
+  }
+  
+  input,
+  button {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      padding: 10px;
+      /*border: 1px solid #ccc;*/
+      font: inherit;
   }
 </style>

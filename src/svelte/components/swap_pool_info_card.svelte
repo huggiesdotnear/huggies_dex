@@ -49,5 +49,6 @@
     padding: 5px;
     line-break: anywhere;
     font-size: 10px;
+    box-sizing: border-box;
   }
 </style>

@@ -18,6 +18,7 @@
 <style>
   input {
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
     font-size: 20px;
     width: 500px;
     max-width: 90vw;
