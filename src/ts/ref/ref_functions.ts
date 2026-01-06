@@ -18,6 +18,7 @@ interface ref_args_params_interface {
   account_id: string;
   token_id: string;
   amount: string;
+  deposit: string;
 }
 // ================================================
 // ref_get_number_of_pools_function
@@ -108,6 +109,25 @@ export async function ref_withdraw_function(
         },
         gas: "30000000000000", // 30 TGas
         deposit: "1",
+      }),
+    ],
+  });
+  console.log(result);
+  return result;
+}
+// ================================================
+// ref_storage_deposit_function
+export async function ref_storage_deposit_function(
+  deposit: ref_args_params_interface["deposit"],
+) {
+  const result = await nearClient().sendTx({
+    receiverId: ref_contractId_for_network(),
+    actions: [
+      nearClient().actions.functionCall({
+        methodName: ref_exchange_methods_const.storage_deposit,
+        // args: { },
+        gas: "30000000000000", // 30 TGas
+        deposit: deposit,
       }),
     ],
   });
