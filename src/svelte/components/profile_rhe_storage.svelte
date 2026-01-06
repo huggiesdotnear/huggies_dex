@@ -13,6 +13,7 @@
 <!-- COMPONENT_RHEA_STORAGE -->
 <div>
   <h4>RHEA STORAGE</h4>
+  <p>(click to make storgae deposit tx)</p>
   <button on:click={minium_deposit}>STORAGE DEPOSIT</button>
 </div>
 
